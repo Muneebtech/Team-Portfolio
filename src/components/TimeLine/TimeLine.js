@@ -68,7 +68,7 @@ const Timeline = () => {
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
         I am a Full Stacl Website Developer and I have been building highly
-        interactive and scalable wesbites since 2020. Learning and challenging
+        interactive and scalable websites since 2020. Learning and challenging
         myself everyday by working in an agile environment.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
