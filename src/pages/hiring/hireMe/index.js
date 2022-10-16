@@ -1,6 +1,7 @@
 import { Layout } from "../../../layout/Layout";
 import {
   ButtonBack,
+  ButtonFront,
   Input,
   Section,
   SectionDivider,
@@ -124,9 +125,9 @@ const HireMe = () => {
               placeholder="Message"
               onChange={handleChange}
             ></Input>
-            <ButtonBack type="submit">
+            <Button type="submit">
               Send Email
-            </ButtonBack>
+            </Button>
             <Dna
               visible={loader}
                 color="#00BFFF"
