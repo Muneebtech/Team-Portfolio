@@ -11,6 +11,7 @@ import {
 import { projects, team } from "../../../constants/constants";
 import { Layout } from "../../../layout/Layout";
 import {
+  Input,
   Section,
   SectionDivider,
   SectionDivider2,
@@ -19,7 +20,6 @@ import {
   SectionText2,
   SectionTitle,
 } from "../../../styles/GlobalComponents";
-import { FormContainer, Input } from "./TeamStyles";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

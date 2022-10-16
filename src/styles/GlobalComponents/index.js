@@ -76,6 +76,26 @@ export const SectionText = styled.p`
     padding-bottom: 16px;
   }
 `
+export const Input = styled.input`
+  text-align: center;
+  width: 380px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius:20px;
+  margin-bottom:10px;
+
+  @media ${props => props.theme.breakpoints.lg} {
+    background-image: none;
+    padding: 0;
+    margin-top: 40px;
+  }
+  @media ${props => props.theme.breakpoints.md} {
+    background-image: none;
+    padding: 0;
+    margin-top: 16px;
+  }
+`
 export const SectionText2 = styled.p`
   font-size: 24px;
   line-height: 40px;

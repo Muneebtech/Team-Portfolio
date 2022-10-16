@@ -1,5 +1,6 @@
 import { Layout } from "../../../layout/Layout";
 import {
+  Input,
   Section,
   SectionDivider,
   SectionDivider2,
@@ -19,7 +20,6 @@ import { NavLink } from "../../../components/Header/HeaderStyles";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointDown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
-import { Input } from "./HireMeStyles";
 
 const HireMe = () => {
   const [data, setData] = useState({
