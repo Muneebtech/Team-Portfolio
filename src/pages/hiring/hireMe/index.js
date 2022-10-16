@@ -19,7 +19,8 @@ import { NavLink } from "../../../components/Header/HeaderStyles";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointDown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
-import { Input } from "../Team/TeamStyles";
+import { Input } from "./HireMeStyles";
+
 const HireMe = () => {
   const [data, setData] = useState({
     from_name: "",
