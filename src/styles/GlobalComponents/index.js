@@ -76,10 +76,53 @@ export const SectionText = styled.p`
     padding-bottom: 16px;
   }
 `
+export const SectionText2 = styled.p`
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align:justify;
+  // padding-bottom: 3.6rem;
+  color: rgba(255, 255, 255, 0.5);
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    max-width: 670px;
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 24px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 16px;
+  }
+`
 
 export const SectionDivider = styled.div`
 
   width: 64px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #fff;
+  background: ${(props) => props.colorAlt ? 
+    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
+    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+
+    margin: ${(props) => props.divider ? "4rem 0" : "" };
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    width: 48px;
+    height: 4px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 32px;
+    height: 2px;
+  }
+`
+export const SectionDivider2 = styled.div`
+
+  width: 50%;
   height: 6px;
   border-radius: 10px;
   background-color: #fff;

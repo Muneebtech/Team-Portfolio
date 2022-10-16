@@ -26,7 +26,7 @@ const Timeline = () => {
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: "smooth" });
+    return node?.scrollTo({ left, behavior: "smooth" });
   };
 
   const handleClick = (e, i) => {
@@ -67,7 +67,7 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        I am a Full Stacl Website Developer and I have been building highly
+        I am a Full Stack Website Developer and I have been building highly
         interactive and scalable websites since 2020. Learning and challenging
         myself everyday by working in an agile environment.
       </SectionText>
