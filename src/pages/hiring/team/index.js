@@ -11,6 +11,7 @@ import {
 import { projects, team } from "../../../constants/constants";
 import { Layout } from "../../../layout/Layout";
 import {
+  ButtonBack,
   Input,
   Section,
   SectionDivider,
@@ -28,13 +29,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { NavLink } from "../../../components/Header/HeaderStyles";
+import ToastMessage from "../../../components/Toast";
+import { Dna } from "react-loader-spinner";
+import Button from "../../../styles/GlobalComponents/Button";
 const Team = () => {
   const [data, setData] = useState({
     from_name: "",
     email_id: "",
     message: "",
   });
-  const [Emailsent, setEmailsent] = useState(false);
+  const [loader, setloader] = useState(false)
   function handleChange(params) {
     const { name, value } = params.target;
     setData({ ...data, [name]: value });
@@ -42,6 +46,7 @@ const Team = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setloader(true)
     emailjs
       .sendForm(
         "service_ol6c8kb",
@@ -51,14 +56,14 @@ const Team = () => {
       )
       .then(
         (result) => {
-          setEmailsent(true);
-          message.success(
-            "Email Sent!,Thank you, I will get back to you ASAP."
-          );
+          console.log(result.text);
+          ToastMessage({ type: 'success', message: "Email Sent!, Thank you, I'll get back to you ASAP." });
+          setloader(false)
           setData({});
         },
         (error) => {
-          console.log(error.text, "error");
+          ToastMessage({type:'error', message:error} );
+
         }
       );
     e.target.reset();
@@ -101,7 +106,7 @@ const Team = () => {
             <SectionDivider2 />
             <SectionTitle>Contact Me</SectionTitle>
             <SectionSubText>
-             To Hire my team, kindly fill the form{" "}
+              To Hire my team, kindly fill the form{" "}
               <FontAwesomeIcon icon={faHandPointDown} /> or
               <Link href="/hiring/hireMe">
                 <NavLink>
@@ -114,6 +119,9 @@ const Team = () => {
               name="from_name"
               placeholder="Name"
               type="text"
+              required
+              minlength="3"
+              maxlength="20"
               value={data.from_name}
               onChange={handleChange}
             ></Input>
@@ -121,19 +129,31 @@ const Team = () => {
               name="email_id"
               placeholder="Email"
               type="email"
+              required
+              minlength="10"
+              maxlength="25"
               value={data.email_id}
               onChange={handleChange}
             ></Input>
             <Input
               name="message"
               type="text"
+              required
+              minlength="1"
               value={data.message}
               placeholder="Message"
               onChange={handleChange}
             ></Input>
-            <button style={{ width: "100px", height: "30px" }} type="submit">
+            <ButtonBack  type="submit">
               Send Email
-            </button>
+            </ButtonBack>
+            <Dna
+              visible={loader}
+                color="#00BFFF"
+                height={100}
+                width={100}
+                timeout={3000}
+              />
             <SectionDivider2 />
           </div>
         </Section>

@@ -36,6 +36,12 @@ export const Div2 = styled.div`
     grid-area: 2 / 2 / 3 / 5;
   }
 `;
+export const LI = styled.li`
+ 
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size:10px;
+  }
+`;
 export const Div3 = styled.div`
   grid-area: 1 / 5 / 2 / 6;
   display: flex;

@@ -1,5 +1,6 @@
 import { Layout } from "../../../layout/Layout";
 import {
+  ButtonBack,
   Input,
   Section,
   SectionDivider,
@@ -8,7 +9,7 @@ import {
   SectionText2,
   SectionTitle,
 } from "../../../styles/GlobalComponents";
-import { message } from "antd";
+import { message, Spin } from "antd";
 import emailjs from "@emailjs/browser";
 import { myInformation } from "../../../constants/constants";
 import {
@@ -18,8 +19,14 @@ import {
 import Link from "next/link";
 import { NavLink } from "../../../components/Header/HeaderStyles";
 import { useState } from "react";
+import { Dna, Oval } from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHandPointDown, faSmileWink } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHandPointDown,
+  faSmileWink,
+} from "@fortawesome/free-solid-svg-icons";
+import ToastMessage from "../../../components/Toast";
+import Button from "../../../styles/GlobalComponents/Button";
 
 const HireMe = () => {
   const [data, setData] = useState({
@@ -27,6 +34,7 @@ const HireMe = () => {
     email_id: "",
     message: "",
   });
+  const [loader, setloader] = useState(false);
   function handleChange(params) {
     const { name, value } = params.target;
     setData({ ...data, [name]: value });
@@ -34,6 +42,7 @@ const HireMe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setloader(true);
     emailjs
       .sendForm(
         "service_ol6c8kb",
@@ -44,13 +53,15 @@ const HireMe = () => {
       .then(
         (result) => {
           console.log(result.text);
-          message.success(
-            "Email Sent!,Thank you, I will get back to you ASAP."
-          );
+          ToastMessage({
+            type: "success",
+            message: "Email Sent!, Thank you, I'll get back to you ASAP.",
+          });
+          setloader(false);
           setData({});
         },
         (error) => {
-          console.log(error.text, "error");
+          toast(error, error);
         }
       );
     e.target.reset();
@@ -83,13 +94,14 @@ const HireMe = () => {
             <SectionTitle>Contact Me</SectionTitle>
             <SectionSubText>
               Hire me as a developer, kindly fill the form{" "}
-              <FontAwesomeIcon icon={faHandPointDown} /> or
+              <FontAwesomeIcon icon={faHandPointDown} />
+              {/* or
               <Link href="/hiring/team">
                 <NavLink>
                   {" "}
                   Click To Hire My Team <FontAwesomeIcon icon={faSmileWink} />
                 </NavLink>
-              </Link>
+              </Link> */}
             </SectionSubText>
             <Input
               name="from_name"
@@ -112,9 +124,16 @@ const HireMe = () => {
               placeholder="Message"
               onChange={handleChange}
             ></Input>
-            <button style={{ width: "100px", height: "30px" }} type="submit">
+            <ButtonBack type="submit">
               Send Email
-            </button>
+            </ButtonBack>
+            <Dna
+              visible={loader}
+                color="#00BFFF"
+                height={100}
+                width={100}
+                timeout={3000}
+              />
             <SectionDivider2></SectionDivider2>
           </div>
         </Section>

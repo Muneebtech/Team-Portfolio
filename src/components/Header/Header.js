@@ -45,11 +45,11 @@ const Header = () => (
           <NavLink>Hire Me</NavLink>
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="/hiring/team">
           <NavLink>Team</NavLink>
         </Link>
-      </li>
+      </li> */}
     </Div2>
     <Div3>
       <SocialIcons href="https://github.com/Muneebtech" target='_blank'>
