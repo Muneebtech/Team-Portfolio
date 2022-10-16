@@ -42,7 +42,7 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2017, text: "Started my journey in Software Enginnering" },
+  { year: 2017, text: "Started my journey in Software Engineering" },
   { year: 2020, text: "Worked as a Freelance Mobile App Developer" },
   { year: 2021, text: "Worked as a Freelance Website Developer" },
   { year: 2022, text: "Software Engineer at Stack Intel.IO" },
