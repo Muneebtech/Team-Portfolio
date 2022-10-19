@@ -40,25 +40,25 @@ const Header = () => (
           <NavLink>About</NavLink>
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="/hiring/hireMe">
           <NavLink>HireMe</NavLink>
         </Link>
-      </li>
-      {/* <li>
+      </li> */}
+      <li>
         <Link href="/hiring/team">
           <NavLink>Team</NavLink>
         </Link>
-      </li> */}
+      </li>
     </Div2>
     <Div3>
-      <SocialIcons href="https://github.com/Muneebtech" target='_blank'>
+      <SocialIcons href="https://github.com" target='_blank'>
         <AiFillGithub size="3rem"></AiFillGithub>
       </SocialIcons>
-      <SocialIcons href="https://instagram.com/ranamuneebtahir" target='_blank'>
+      <SocialIcons href="https://instagram.com" target='_blank'>
         <AiFillInstagram size="3rem"></AiFillInstagram>
       </SocialIcons>
-      <SocialIcons href="https://www.linkedin.com/in/ranamuneebtahir" target='_blank'>
+      <SocialIcons href="https://www.linkedin.com/" target='_blank'>
         <AiFillLinkedin size="3rem"></AiFillLinkedin>
       </SocialIcons>
     </Div3>

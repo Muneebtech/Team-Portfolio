@@ -106,14 +106,15 @@ const Team = () => {
             <SectionDivider2 />
             <SectionTitle>Contact Me</SectionTitle>
             <SectionSubText>
-              To Hire my team, kindly fill the form{" "}
-              <FontAwesomeIcon icon={faHandPointDown} /> or
+              To Hire team, kindly fill the form{" "}
+              <FontAwesomeIcon icon={faHandPointDown} />
+              {/* or
               <Link href="/hiring/hireMe">
                 <NavLink>
                   {" "}
                   Click To Hire Me <FontAwesomeIcon icon={faSmileWink} />
                 </NavLink>
-              </Link>
+              </Link> */}
             </SectionSubText>
             <Input
               name="from_name"

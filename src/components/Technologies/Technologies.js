@@ -18,8 +18,8 @@ const Technologies = () => (
   <Section id="tech">
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      I've worked with a range of technologies in the web development world.
-      From Back-end to Design. Deploying sites on AWS, Aapanel & Cpanel.
+      We've worked with a range of technologies in the web development world.
+      From Back-end to Design. Software testting & Deploying sites on AWS, Aapanel & Cpanel.
     </SectionText>
     <List>
       <ListItem>
@@ -29,6 +29,15 @@ const Technologies = () => (
           <ListParagraph />
           Experience with <br />
           React.js & Next.js
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <DiReact size="3rem" />
+        <ListContainer>
+          <ListTitle>Website</ListTitle>
+          <ListParagraph />
+          Experience with <br />
+          WordPress
         </ListContainer>
       </ListItem>
       <ListItem>

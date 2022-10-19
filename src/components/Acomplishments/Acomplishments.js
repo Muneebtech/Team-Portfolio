@@ -6,14 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const data = [
-  {  text: 'Gold Medalist in Football'},
   {  text: 'React Js Course Certificate' },
-  {  text: 'Full Stack Web Development Certificate' }
+  {  text: 'Full Stack Web Development Certificate' },
+  {  text: 'WordPress Udemy Certificate' }
 ];
 
 const Acomplishments = () => (
   <Section>
-    <SectionTitle>Personal Achievements</SectionTitle>
+    <SectionTitle>Achievements</SectionTitle>
     <Boxes>
       {data.map((card, index) => (
         <Box key={index}>
