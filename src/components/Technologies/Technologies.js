@@ -37,7 +37,7 @@ const Technologies = () => (
           <ListTitle>Website</ListTitle>
           <ListParagraph />
           Experience with <br />
-          WordPress
+          WordPress & Laravel
         </ListContainer>
       </ListItem>
       <ListItem>
