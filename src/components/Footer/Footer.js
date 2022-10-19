@@ -19,7 +19,7 @@ const Footer = () => {
           ranamuneebtahir@gmail.com
         </LinkItem>
         <LinkItem href="mailto:khubaib@gmail.com">
-          khubaib@gmail.com
+          h.khubaib07@gmail.com
         </LinkItem>
       </LinkColumn>
     </LinkList>
